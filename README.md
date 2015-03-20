@@ -21,13 +21,24 @@ From the Coursera Task description::
 > You should create one R script called run_analysis.R that does the following. 
 
 1. Merges the training and the test sets to create one data set.
+> This is done using cbind and rbind
 
 2. Extracts only the measurements on the mean and standard deviation for each measurement. 
+> This is done using grepl("mean|std|Subject|ActivityId")
 
 3. Uses descriptive activity names to name the activities in the data set
+> This is done using join
 
 4. Appropriately labels the data set with descriptive variable names. 
+> This is done using gsub and regexes for the variables thus replacing their names, e.g. std becomes Standarddeviation, t becomes TimeRelated and so on. 
 
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+> The last step uses plyr, more exactly ddply()
 
 ## Files
+The following files are in this repository:
+
+* CodeBook.md -> The Codebook on how the data was cleaned
+* README.md -> This file
+* run_Analysis.R -> The R program for the data cleaning
+* my_data_mean_by_activity.txt -> The resulting dataset that has been cleaned and tidied. 
