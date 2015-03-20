@@ -53,4 +53,4 @@ names(my_mean_std) <- gsub('^t',"TimeRelated.",names(my_mean_std))
 
 # Step 5:
 my_data_mean_by_activity = ddply(my_mean_std, c("Subject","Activity"), numcolwise(mean))
-write.table(my_data_mean_by_activity, file = "my_data_mean_by_activity.txt")
+write.table(my_data_mean_by_activity, file = "my_data_mean_by_activity.txt", row.name=FALSE)
