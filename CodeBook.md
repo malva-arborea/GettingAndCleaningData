@@ -55,20 +55,19 @@ Transforming the data takes 5 steps (taken from the Coursera project description
 The following variables are used in this program (ordered alphabetically):
 
 ```
- my_activity_labels: contains the data from the file activity_labels.txt
- my_data_mean_by_activity: contains the resulting data set
- my_features: contains the data from the file features.txt
- my_mean_std: contains mean and standard deviation data
- my_sensor_data: is the concatenated data from both training and test datasets
- my_sensor_labels: represents the label data
- my_subject_test: contains the data from the file subject_test.txt
- my_subject_train: contains the data from the file subject_train.txt
- my_test_sensor_data: contains the data from the test dataset (both from the subject and the sensor)
- my_training_sensor_data: contains the data from the training dataset (both from the subject and the sensor)
- my_x_test: contains the data from the file X_test.txt
- my_x_train: contains the data from the file X_train.txt
- my_y_test: contains the data from the file y_test.txt
- my_y_train: contains the data from the file y_train.txt
+ my_activity_labels: contains the data from the file activity_labels.txt:  6 rows / 2 columns
+ my_data_mean_by_activity: contains the resulting data set: 180 rows / 81 columns
+ my_features: contains the data from the file features.txt: 561 rows / 2 columns
+ my_mean_std: contains mean and standard deviation data: 10299 rows / 81 columns
+ my_sensor_data: is the concatenated data from both training and test datasets: 10299 rows / 563 columns
+ my_subject_test: contains the data from the file subject_test.txt: 2947 rows / 1 column
+ my_subject_train: contains the data from the file subject_train.txt: 7352 rows / 1 column
+ my_test_sensor_data: contains the data from the test dataset (both from the subject and the sensor): 2947 rows/ 563 columns
+ my_training_sensor_data: contains the data from the training dataset (both from the subject and the sensor): 7352 rows / 563 columns
+ my_x_test: contains the data from the file X_test.txt: 2947 rows / 561 columns
+ my_x_train: contains the data from the file X_train.txt: 7352 rows / 561 columns
+ my_y_test: contains the data from the file y_test.txt:  2947 rows /  1 columns
+ my_y_train: contains the data from the file y_train.txt: 7352 rows / 1 columns
 ```
 
 ### Program Code
@@ -93,8 +92,8 @@ Shortly explained, it does the following:
 4. Labelling with descriptive names by using gsub with regexes, e.g. std becomes Standarddeviation, t becomes TimeRelated and so on. 
 
 5. Creating an independent dataset. This is done using plyr, more precisesly ddply() and writing it out as requested using write.table()
-6. 
-### Result
+
+### Result
 
 The resulting file has 180 rows and 81 columns. The following are the column names:
 ```
